@@ -24,7 +24,11 @@ module.exports = app => {
     app.get('/viewAll', controllers.query.queryAll);
     
     //Rent functions
-    app.get('/details', controllers.rent.details);
+    app.get('/details/:id', controllers.rent.getRentDetails);
+    app.post('/rent/:id', controllers.rent.rentCar)
+
+    //Profile
+    app.get('/userProfile/:id', controllers.user.getProfile)
 
     app.all('*', (req, res) => {
         res.status(404);

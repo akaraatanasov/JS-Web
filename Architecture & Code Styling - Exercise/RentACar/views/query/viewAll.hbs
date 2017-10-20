@@ -1,9 +1,13 @@
 {{#each data}}
+<br>
+<a href="details/{{this._id}}">
 <p>{{this.brand}}</p>
 <p>{{this.model}}</p>
 <img src="{{this.image}}" alt="carImage">
 <p>I'm worth {{this.pricePerDay}}</p>
 <p>{{this.year}}</p>
+</a>
+<br>
 {{/each}}
 
 {{#else}}

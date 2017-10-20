@@ -1,5 +1,7 @@
 const encryption = require('../util/encryption');
 const User = require('mongoose').model('User');
+const Car = require('mongoose').model('Car');
+const KeyChain = require('mongoose').model('KeyChain');
 
 module.exports = {
     registerGet: (req, res) => {
@@ -68,5 +70,15 @@ module.exports = {
             res.locals.globalError = e;
             res.render('users/login');
         }
+    },
+    getProfile: (req, res) => {
+        let currentUser = req.params._id
+
+        KeyChain.find({}).where('renter').equals(currentUser).populate('car').populate('renter').then((keyChains) => {
+            console.log(keyChains)
+            console.log()
+
+            res.render('users/profile', {keyChains})
+        })
     }
 };
