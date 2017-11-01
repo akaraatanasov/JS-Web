@@ -1,0 +1,29 @@
+h1 Customize your order
+        .catalog
+          .column
+            img(src='static/img/chicken-21.png')
+          .column
+            h2= data.category
+            h3 Toppings
+            .toppings
+              form
+                input(name='product_id', type='hidden', value='chicken_21')
+                input(name='topping01', type='checkbox', value='topping01', checked='')
+                label(for='topping01') Pickles
+                br
+                input(name='topping02', type='checkbox', value='topping02', checked='')
+                label(for='topping02') Tomato
+                br
+                input(name='topping03', type='checkbox', value='topping03', checked='')
+                label(for='topping03') Onion
+                br
+                input(name='topping04', type='checkbox', value='topping04', checked='')
+                label(for='topping04') Lettuce
+                br
+                input(name='topping05', type='checkbox', value='topping05')
+                label(for='topping05') Hot Sauce
+                br
+                input(name='topping06', type='checkbox', value='topping06')
+                label(for='topping06') Extra Sauce
+                br
+            a.button(href='order-details.html') Checkout

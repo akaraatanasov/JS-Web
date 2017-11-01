@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+    form(method='post')
+        h2 Create Product
+        div
+            label(for='category') Category
+            select#category(name='category')
+                option(value='beef') Beef
+                option(value='chicken') Chicken
+                option(value='lamb') Lamb
+        div
+            label(for='imageUrl') Image Url
+            input#imageUrl(name='imageUrl', type='text')
+        div
+            label(for='size') Size
+            input#size(name='size', type='number')
+        div
+            strong Toppings
+            br
+            input(name='toppings', type='text')
+        div
+            input.button(type='submit', value='Create', style='border:0')

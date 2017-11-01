@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		title Doner Place
+		link(href='/css/site.css', type='text/css', rel='stylesheet')
+	body
+		.container
+			header
+				span.logo Doner  Place
+				if user
+					span.greeting= user.username
+						a(href='/logout')  [logout]
+					ul.menu
+						li
+							a.button(href='/') Home
+						li
+							a.button(href='order-status') Order Status
+				else 
+					span.greeting
+						| Welcome!
+					ul.menu
+						li
+							a.button(href='/') Home
+						li
+							a.button(href='order-status') Order Status
+						li
+							a.button(href='/login') Login
+						li
+							a.button(href='/register') Register
+			main
+				block content
+			footer Doner Place © 2017
