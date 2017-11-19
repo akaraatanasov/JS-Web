@@ -1,15 +1,10 @@
 {
-  "name": "cars-system",
+  "name": "exam-server",
   "version": "0.0.1",
-  "description": "Cars system",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": [
-    "cars",
-    "system"
-  ],
   "author": "Ivaylo Kenov",
   "license": "MIT",
   "dependencies": {

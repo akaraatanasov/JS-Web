@@ -1,13 +1,13 @@
 {
-  "name": "cars-system",
+  "name": "pets-system",
   "version": "0.0.1",
-  "description": "Cars system",
+  "description": "Pets system",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "keywords": [
-    "cars",
+    "pets",
     "system"
   ],
   "author": "Ivaylo Kenov",

@@ -2,7 +2,6 @@ const usersById = {}
 const usersByEmail = {}
 
 module.exports = {
-  total: () => Object.keys(usersById).length,
   save: (user) => {
     const id = Object.keys(usersById).length + 1
     user.id = id
