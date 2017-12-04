@@ -1,0 +1,12 @@
+.pokemon {
+    text-align: center;
+}
+
+.info {
+    float: right;
+    margin-right: 100px;
+}
+
+.pokeImg {
+    float: center;
+}

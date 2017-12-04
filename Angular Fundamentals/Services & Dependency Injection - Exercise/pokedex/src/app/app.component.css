@@ -1,0 +1,17 @@
+.details {
+    text-align:center;
+}
+
+.auth {
+    margin-top: 20px;
+}
+
+.search {
+    float: left;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.detail {
+    float: center;
+}

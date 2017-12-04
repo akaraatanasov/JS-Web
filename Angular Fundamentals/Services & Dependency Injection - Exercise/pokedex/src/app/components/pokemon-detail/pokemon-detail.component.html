@@ -1,0 +1,11 @@
+<div *ngIf="pokemonToView" class="pokemon">
+  <div class="info">
+    <h3>{{pokemonToView?.data.ename}}</h3>
+    <p>HP: {{pokemonToView?.data.base.HP}}</p>
+    <p>Attack: {{pokemonToView?.data.base.Attack}}</p>
+    <p>Defense: {{pokemonToView?.data.base.Defense}}</p>
+  </div>
+  <div class="pokeImg">
+      <img src={{pokemonImage}}>
+  </div>  
+</div>
