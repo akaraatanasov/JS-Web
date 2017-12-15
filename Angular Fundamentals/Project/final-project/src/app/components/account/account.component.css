@@ -1,0 +1,47 @@
+.header-wrapper{
+  margin-top: 64px;
+  background-color: #7606d1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header-wrapper > h1{
+  margin: 0;
+  padding: 10px;
+  color: white;
+}
+
+.header-wrapper-2{
+  background-color: #b372e7;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header-wrapper-2 > h2{
+  margin: 0;
+  padding: 10px;
+  color: white;
+}
+
+
+.text-wrapper{
+  margin: 0;
+  background-color: #444546;
+  text-align: center;
+}
+
+.text-wrapper > p{
+  margin: 0;
+  padding: 10px;
+  color: white;
+}
+.text-wrapper-additional{
+  padding: 5px;
+  margin: 0 !important;
+  background-color: #83223f;
+  text-align: center;
+}
+
+.login-anchor{
+  color: #e1f5fe;
+}

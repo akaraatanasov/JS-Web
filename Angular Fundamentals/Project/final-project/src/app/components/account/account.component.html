@@ -1,0 +1,100 @@
+<div class="header-wrapper">
+  <h1 class="header center white-text text-lighten-2">Account settings</h1>
+</div>
+<div class="header-wrapper-2">
+  <h2 class="header center white-text text-lighten-2" *ngIf="profileData.username">Hello, {{profileData?.username}}!</h2>
+</div>
+
+<div class="text-wrapper">
+  <p>
+    <b>Here you can see and edit your currency balance</b>
+  </p>
+</div>
+<br/>
+<br/>
+<form class="col s10 offset-s1" (ngSubmit)="updateData()">
+  <div class="row">
+    <div class="input-field col s5 offset-s1">
+      <div class="col-sm-4">
+        <i class="material-icons">attach_money</i> Bitcoin Balance
+        <input type="text" class="form-control" id="inputWallet" placeholder="Loading ..." disabled [(ngModel)]="profileData.bitBalance"
+          name="bitBalance">
+      </div>
+    </div>
+    <div class="input-field col s5">
+      <div class="col-sm-4">
+        <i class="material-icons">credit_card</i> Euro Balance
+        <input type="text" class="form-control" id="inputWallet" placeholder="Loading ..." [(ngModel)]="profileData.eurBalance" name="eurBalance">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4 center">
+      <button type="reset" class="btn btn-default grey" (click)="getBack()">Back</button>
+      <button type="submit" class="btn btn-primary green">Update Balance</button>
+    </div>
+    <br>
+    <br>
+  </div>
+</form>
+
+<div class="text-wrapper">
+  <p>
+    <b>Here you can see and edit your account information</b>
+  </p>
+</div>
+<br/>
+<br/>
+<form class="col s10 offset-s1" (ngSubmit)="updateData()">
+  <div class="row">
+    <div class="input-field col s5 offset-s1">
+      <div class="col-sm-4 ">
+        <i class="material-icons">email</i> Email
+        <input type="text" class="form-control" id="email" placeholder="Loading ..." [(ngModel)]="profileData.email" name="email">
+      </div>
+    </div>
+    <div class="input-field col s5">
+      <div class="col-sm-4 ">
+        <i class="material-icons">person_pin</i> Username
+        <input type="text" class="form-control" id="username" disabled placeholder="Loading ..." [(ngModel)]="profileData.username"
+          name="username">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s5 offset-s1">
+      <div class="col-sm-4">
+        <i class="material-icons">attach_money</i> Bitcoin Wallet
+        <input type="text" class="form-control" id="wallet" placeholder="Loading ..." [(ngModel)]="profileData.wallet" name="wallet">
+      </div>
+    </div>
+    <div class="input-field col s5">
+      <div class="col-sm-4">
+        <i class="material-icons">credit_card</i> IBAN
+        <input type="text" class="form-control" id="iban" placeholder="Loading ..." [(ngModel)]="profileData.iban" name="iban">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4 center">
+      <button type="reset" class="btn btn-default grey" (click)="getBack()">Back</button>
+      <button type="submit" class="btn btn-primary green">Update Profile</button>
+    </div>
+    <br>
+    <br>
+  </div>
+</form>
+
+<div class="text-wrapper" *ngIf="catalog.length > 0">
+  <p>
+    <b>Check your offers here:</b>
+  </p>
+</div>
+<br/><br/>
+<div class="container">
+  <div class="row" *ngIf="catalog">
+    <div *ngFor="let offer of catalog">
+      <app-offer [offer]="offer" [permissions]="permissions"></app-offer>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+.header-wrapper{
+  margin-top: 64px;
+  background-color: #b9a637;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.header-wrapper > h1{
+  margin: 0;
+  padding: 10px;
+  color: white;
+}
+
+
+.text-wrapper{
+  margin: 0;
+  background-color: #444546;
+  text-align: center;
+}
+
+.text-wrapper > p{
+  margin: 0;
+  padding: 10px;
+  color: white;
+}

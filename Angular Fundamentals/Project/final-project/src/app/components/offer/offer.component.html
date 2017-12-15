@@ -1,0 +1,55 @@
+<div class="col s6 offer-wrapper ">
+  <div class="card horizontal hoverable">
+    <div class="card-stacked">
+      <div class="card-content">
+        <!-- <h6>Seller: {{offer._acl.creator}}</h6> -->
+        <h6 *ngIf="seller?.name">Seller: {{seller?.name}}</h6>
+        <h5>
+          <img class="activator card-image-btc" src="./../../../assets/btc.png" alt="{{offer.bitvalue}}">
+          <span class="">&nbsp;
+            <b>{{offer.bitValue}} BTC</b>
+          </span>
+          &nbsp;&nbsp;
+          <img class="activator card-image-eur" src="./../../../assets/eur.png" alt="{{offer.bitvalue}}">
+          <span class="">&nbsp;
+            <b>{{offer.eurValue}} EUR</b>
+          </span>
+        </h5>
+          <span class="right" *ngIf="!(offer.acceptsBargains && permissions)">
+            <br><br><br>
+          </span>
+          <span class="left num" *ngIf="offer.acceptsBargains && permissions">
+              <input type="number" class="form-control" id="bargainPrice" placeholder="Bargain Price" required name="bargainPrice" [(ngModel)]="bargainPrice">  
+          </span>
+          <span class="right barg" *ngIf="offer.acceptsBargains && permissions">
+              <a class="white-text" routerLink="/offers/details/{{offer._id}}">
+                <button type="submit" class="btn btn-primary green brg">Bargain</button>
+              </a>
+          </span>
+      </div>
+      <div class="card-action" *ngIf="permissions">
+        <p>
+          <span class="left" *ngIf="seller.name === buyer.name || buyer.isAdmin">
+            <a class="white-text" routerLink="/offers/delete/{{offer._id}}">
+              <button type="submit" class="btn btn-primary red">Delete</button>
+            </a>
+          </span>
+          <span class="center" *ngIf="seller.name === buyer.name">
+            <a class="white-text" routerLink="/offers/edit/{{offer._id}}">
+              <button type="submit" class="btn btn-primary orange">Edit</button>
+            </a>
+          </span>
+          <span *ngIf="permissions" class="right buy">
+            <!-- <a class="white-text" routerLink="/offers/buy/{{offer._id}}"> -->
+            <a class="white-text" (click)="makePurchase()">
+              <button type="submit" class="btn btn-primary green">Buy</button>
+            </a>
+          </span>
+        </p>
+        <p *ngIf="!permissions">
+          <a class="red-text" routerLink="/login">Please log in to be able to buy</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

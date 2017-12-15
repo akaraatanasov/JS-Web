@@ -1,0 +1,46 @@
+.offer-wrapper{
+  margin-top: 1%;
+  height: 300px !important;
+  margin-bottom: 1%;
+  /* margin-bottom: 20px; */
+  /* width: 450px !important; */
+}
+  
+.card-image-btc{
+  height: 35px !important;
+}
+
+.card-image-eur{
+  height: 35px !important;
+}
+
+.align-content-center{
+  text-align: center;
+}
+
+span.tags{
+  color: dodgerblue !important;
+  font-weight: bold;
+  font-style: italic ;
+}
+
+.card{
+  margin: 0;
+}
+
+.btn{
+  margin-right: 0px;
+}
+
+.brg{
+  margin-top: 10%;
+}
+
+.barg{
+  margin-right: 10%;
+}
+
+.num{
+  margin-top: 1%;
+  margin-left: 6%;
+}

@@ -1,0 +1,62 @@
+<div class="header-wrapper">
+  <h1 class="header center white-text text-lighten-2">Register</h1>
+</div>
+<div class="text-wrapper">
+  <p>Join <b>BitCash</b> and get cash for your Bitcoin immediately</p>
+  <p><b>Please fill the form below:</b></p>
+</div>
+<br/>
+<form class="col s10 offset-s1" (ngSubmit)="submitRegister()">
+  <div class="row">
+    <div class="input-field col s5 offset-s1">
+      <div class="col-sm-4 ">
+        <i class="material-icons">email</i> Email
+        <input type="text" class="form-control" id="inputEmail" placeholder="Email" name="email"  [(ngModel)]="email" required>
+      </div>
+    </div>
+    <div class="input-field col s5">
+      <div class="col-sm-4 ">
+        <i class="material-icons">person_pin</i> Username
+        <input type="text" class="form-control" id="inputFullName" placeholder="Username" required  [(ngModel)]="username" name="username">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s5 offset-s1">
+      <div class="col-sm-4">
+        <i class="material-icons">lock</i> Password
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password" required [(ngModel)]="password" name="password">
+      </div>
+    </div>
+    <div class="input-field col s5">
+      <div class="col-sm-4">
+        <i class="material-icons">lock</i> Confirm Password
+        <input type="password" class="form-control" id="repeatedPassword" placeholder="Confirm Password" required [(ngModel)]="repeatedPassword" name="repeatedPassword">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s5 offset-s1">
+      <div class="col-sm-4">
+        <i class="material-icons">attach_money</i> Bitcoin Wallet
+        <input type="text" class="form-control" id="inputWallet" placeholder="Token" required [(ngModel)]="wallet" name="wallet">
+      </div>
+    </div>
+    <div class="input-field col s5">
+      <div class="col-sm-4">
+        <i class="material-icons">credit_card</i> IBAN
+        <input type="text" class="form-control" id="inputIBAN" placeholder="IBAN number" required [(ngModel)]="iban" name="iban">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4 center">
+      <button type="reset" class="btn btn-default grey" (click)="getBack()">Back</button>
+      <button type="submit" class="btn btn-primary green">Register</button>
+      <br><br>
+      <span>Already have account?</span>
+      <span><a routerLink="/login">Log In</a></span>
+    </div>
+    <br><br>
+  </div>
+</form>

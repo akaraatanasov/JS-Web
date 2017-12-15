@@ -1,0 +1,52 @@
+nav a, nav .brand-logo {
+  color: rgb(14, 17, 15);
+}
+
+.brand-logo{
+  padding-top: 0.5%;
+  padding-left: 5%;
+  display: inline-block;
+}
+
+
+.nav-ul{
+  display: inline-block; 
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #b9a134;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(34, 16, 16, 0.9);
+}
+.parallax-container .section {
+  width: 100%;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.nav-container{
+  background-color: #818181;
+}
+
+ul.nav-ul > li > a:hover{
+  color: #ffffff;
+}

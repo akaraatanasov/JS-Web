@@ -1,0 +1,16 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+nav {
+  position: fixed;
+  z-index: 45;
+}
+
+.page-footer{
+  padding-top: 0;
+}
